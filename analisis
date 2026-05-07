@@ -7,7 +7,7 @@ Este proyecto documenta mi primer acercamiento práctico al análisis de paquete
 ## 🔍 Análisis de Resolución de Nombres (DNS)
 Utilicé el filtro `dns` para observar la comunicación entre mi equipo y el servidor de nombres.
 
-![Captura de pantalla de mi análisis DNS]()
+![Captura de pantalla de mi análisis DNS](Captura de pantalla 2026-05-06 205400.png)
 
 **Observación técnica:** 
 - Identifiqué paquetes de **Standard Query** viajando por el puerto 53.
