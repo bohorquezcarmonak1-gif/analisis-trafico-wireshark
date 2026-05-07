@@ -1,0 +1,22 @@
+Proyecto: Análisis de Tráfico Web con Wireshark
+
+Introducción
+
+Este proyecto documenta mi primer acercamiento práctico al análisis de paquetes de red. Como aspirante a **Analista SOC**, el objetivo es identificar comportamientos normales y anomalías en el tráfico de datos.
+
+# Primera Captura: Resolución de Nombres (DNS)
+Utilicé el filtro `dns` para observar cómo mi equipo solicita la dirección IP de un dominio.
+
+
+
+**Observación técnica:** 
+- En la captura se aprecia el paquete de consulta (Query) hacia el puerto 53.
+- Se confirma la respuesta del servidor (Response) entregando la IP pública del sitio.
+
+## 🔴 Análisis de Errores y Retransmisiones
+Durante el monitoreo en vivo, identifiqué paquetes marcados en color rojo/negro.
+
+![Captura de paquetes con error](error_rojo.png)
+
+**Diagnóstico:**
+No se trata de un incidente de seguridad, sino de una **TCP Retransmission**. Esto ocurre cuando un paquete se pierde o llega fuera de tiempo, y el protocolo TCP intenta recuperarlo para asegurar que la información llegue completa.
