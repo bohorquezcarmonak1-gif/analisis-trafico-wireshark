@@ -9,14 +9,16 @@ Utilicé el filtro `dns` para observar la comunicación entre mi equipo y el ser
 
 ![Captura de pantalla de mi análisis DNS](Captura de pantalla 2026-05-06 205400.png)
 
-**Observación técnica:** 
+*Observación técnica:
+
 - Identifiqué paquetes de **Standard Query** viajando por el puerto 53.
 - Confirmé la recepción de la IP pública del sitio consultado en el paquete de respuesta.
 
-## 🟢 Estabilidad de la Red y Tráfico Limpio
+#Estabilidad de la Red y Tráfico Limpio
+
 Durante esta sesión de captura, se observó un tráfico altamente estable, sin presencia de retransmisiones (paquetes rojos) significativas.
 
-![Captura de tráfico estable](trafico_limpio.png)
+![Captura de tráfico estable]()
 
 **Conclusión para el SOC:**
 Mantener una red sin errores de transmisión es ideal para el rendimiento. Para un analista, ver un tráfico limpio facilita la identificación de paquetes sospechosos, ya que cualquier irregularidad resaltaría de inmediato sobre el flujo normal de datos.
