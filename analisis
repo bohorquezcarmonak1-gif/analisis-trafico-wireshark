@@ -1,22 +1,26 @@
-Proyecto: Análisis de Tráfico Web con Wireshark
+# Proyecto: Análisis de Tráfico Web con Wireshark
 
-Introducción
+#Introducción
 
-Este proyecto documenta mi primer acercamiento práctico al análisis de paquetes de red. Como aspirante a **Analista SOC**, el objetivo es identificar comportamientos normales y anomalías en el tráfico de datos.
+Este proyecto documenta mi primer acercamiento práctico al análisis de paquetes de red. Como aspirante a **Analista SOC**, el objetivo es establecer una "línea base" para entender cómo se ve el tráfico normal y así poder detectar anomalías en el futuro.
 
-# Primera Captura: Resolución de Nombres (DNS)
-Utilicé el filtro `dns` para observar cómo mi equipo solicita la dirección IP de un dominio.
+## 🔍 Análisis de Resolución de Nombres (DNS)
+Utilicé el filtro `dns` para observar la comunicación entre mi equipo y el servidor de nombres.
 
-![Captura de pantalla de mi análisis DNS](Captura de pantalla 2026-05-06 205400.png)
+![Captura de pantalla de mi análisis DNS]()
 
 **Observación técnica:** 
-- En la captura se aprecia el paquete de consulta (Query) hacia el puerto 53.
-- Se confirma la respuesta del servidor (Response) entregando la IP pública del sitio.
+- Identifiqué paquetes de **Standard Query** viajando por el puerto 53.
+- Confirmé la recepción de la IP pública del sitio consultado en el paquete de respuesta.
 
-## 🔴 Análisis de Errores y Retransmisiones
-Durante el monitoreo en vivo, identifiqué paquetes marcados en color rojo/negro.
+## 🟢 Estabilidad de la Red y Tráfico Limpio
+Durante esta sesión de captura, se observó un tráfico altamente estable, sin presencia de retransmisiones (paquetes rojos) significativas.
 
-![Captura de paquetes con error](error_rojo.png)
+![Captura de tráfico estable](trafico_limpio.png)
 
-**Diagnóstico:**
-No se trata de un incidente de seguridad, sino de una **TCP Retransmission**. Esto ocurre cuando un paquete se pierde o llega fuera de tiempo, y el protocolo TCP intenta recuperarlo para asegurar que la información llegue completa.
+**Conclusión para el SOC:**
+Mantener una red sin errores de transmisión es ideal para el rendimiento. Para un analista, ver un tráfico limpio facilita la identificación de paquetes sospechosos, ya que cualquier irregularidad resaltaría de inmediato sobre el flujo normal de datos.
+
+## 🧠 Lecciones Aprendidas
+1. **Visibilidad:** Wireshark me permite auditar cada consulta que realiza mi sistema operativo.
+2. **Protocolos:** Identifiqué la estructura de "capas" en un paquete real (IP, TCP, DNS).
