@@ -7,7 +7,7 @@ Este proyecto documenta mi primer acercamiento práctico al análisis de paquete
 ## 🔍 Análisis de Resolución de Nombres (DNS)
 Utilicé el filtro `dns` para observar la comunicación entre mi equipo y el servidor de nombres.
 
-![Captura de pantalla de mi análisis DNS](Captura-de-pantalla-2026-05-06-205400.png)
+![Captura de pantalla de mi análisis DNS](DNS.png)
 
 *Observación técnica:
 
@@ -18,7 +18,7 @@ Utilicé el filtro `dns` para observar la comunicación entre mi equipo y el ser
 
 Durante esta sesión de captura, se observó un tráfico altamente estable, sin presencia de retransmisiones (paquetes rojos) significativas.
 
-![Captura de tráfico estable](Captura-de-pantalla-2026-05-06-210952.png)
+![Captura de tráfico estable](Estable.png)
 
 **Conclusión para el SOC:**
 Mantener una red sin errores de transmisión es ideal para el rendimiento. Para un analista, ver un tráfico limpio facilita la identificación de paquetes sospechosos, ya que cualquier irregularidad resaltaría de inmediato sobre el flujo normal de datos.
