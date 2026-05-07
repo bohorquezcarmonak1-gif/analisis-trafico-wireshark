@@ -7,7 +7,7 @@ Este proyecto documenta mi primer acercamiento práctico al análisis de paquete
 ## 🔍 Análisis de Resolución de Nombres (DNS)
 Utilicé el filtro `dns` para observar la comunicación entre mi equipo y el servidor de nombres.
 
-![Captura de pantalla de mi análisis DNS](DNS.png)
+![Captura de pantalla de mi análisis DNS](https://github.com/bohorquezcarmonak1-gif/analisis-trafico-wireshark/blob/main/DNS.png)
 
 *Observación técnica:
 
