@@ -7,7 +7,7 @@ Este proyecto documenta mi primer acercamiento práctico al análisis de paquete
 # Primera Captura: Resolución de Nombres (DNS)
 Utilicé el filtro `dns` para observar cómo mi equipo solicita la dirección IP de un dominio.
 
-Captura de pantalla 2026-05-06 205400.png
+![Captura de pantalla de mi análisis DNS](Captura de pantalla 2026-05-06 205400.png)
 
 **Observación técnica:** 
 - En la captura se aprecia el paquete de consulta (Query) hacia el puerto 53.
